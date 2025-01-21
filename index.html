@@ -1,74 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LibMan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<header>
-    <div class="header-wrapper">
-        <img src="img/book-svgrepo-com.svg" alt="book icon">
-        <h1>LibMan</h1>
-    </div>
-</header>
-
-<main>
-    <div class="cards-container">
-        <div class="card" id="books-card">
-            <div class="card-front">
-                <p>Books</p>
-            </div>
-            <div class="card-back">
-                <h2>Books</h2>
-                <button class="create-button" id="create-book">Create</button>
-                <button class="search-button" id="search-book">Search</button>
-                <button class="update-button" id="update-book">Update</button>
-                <button class="delete-button" id="delete-book">Delete</button>
-            </div>
+    <section class="modal hidden">
+        <div class="flex">
+            <img src="https://avatars.githubusercontent.com/u/62628408?s=96&v=4" width="50px" height="50px"
+                alt="user" />
+            <button class="btn-close">⨉</button>
+        </div>
+        <div>
+            <h3>Stay in touch</h3>
+            <p>
+                This is a dummy newsletter form so don't bother trying to test it. Not
+                that I expect you to, anyways. :)
+            </p>
         </div>
 
-        <div class="card" id="authors-card">
-            <div class="card-front">
-                <p>Authors</p>
-            </div>
-            <div class="card-back">
-                <h2>Authors</h2>
-                <button class="create-button"
-                id="create-author">Create</button>
-                <button class="search-button" id="search-author">Search</button>
-                <button class="update-button"
-                id="update-author">Update</button>
-                <button class="delete-button"
-                id="delete-author">Delete</button>
-            </div>
+        <input type="email" id="email" placeholder="brendaneich@js.com" />
+        <button class="btn">Do Something</button>
+    </section>
+
+    <div class="overlay hidden"></div>
+
+    <header>
+        <div class="header-wrapper">
+            <img src="img/logo.svg" alt="book logo">
+            <h1>LibMan</h1>
         </div>
-    </div>
+    </header>
 
-    <!-- Modals -->
-    <div class="modal" id="modal-create">
-        <div class="modal-content">
-            <h3>Create a New Entity</h3>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Enter name">
-
-                <label for="details">Details:</label>
-                <textarea id="details" placeholder="Enter details"></textarea>
-
-                <div class="modal-actions">
-                    <button type="submit" class="primary">Save</button>
-                    <button type="button" class="secondary" onclick="closeModal('modal-create')">Cancel</button>
+    <main>
+        <div class="cards-container">
+            <div class="card" id="books-card">
+                <div class="card-front"></div>
+                <div class="card-back">
+                    <h2>Books</h2>
+                    <button class="create-button" id="create-book" onclick="openModal()">Create</button>
+                    <button class="search-button" id="search-book">Search</button>
+                    <button class="update-button" id="update-book">Update</button>
+                    <button class="delete-button" id="delete-book">Delete</button>
                 </div>
-            </form>
+            </div>
+
+            <div class="card" id="authors-card">
+                <div class="card-front"></div>
+                <div class="card-back">
+                    <h2>Authors</h2>
+                    <button class="create-button" id="create-author">Create</button>
+                    <button class="search-button" id="search-author">Search</button>
+                    <button class="update-button" id="update-author">Update</button>
+                    <button class="delete-button" id="delete-author">Delete</button>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Additional modals for search, update, delete will follow similar structure -->
+    </main>
 
-</main>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
