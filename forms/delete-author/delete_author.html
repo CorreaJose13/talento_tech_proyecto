@@ -11,8 +11,8 @@
 <h2>Delete author</h2>
 <form id="delete-author-form" class="form" onsubmit="confirmDeleteAuthorForm(); return false ;">
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" maxlength="60" required>
+        <label for="name-delete">Name</label>
+        <input type="text" id="name-delete" name="name-delete" maxlength="60" required>
     </div>
 
     <div class="form-buttons">
@@ -23,7 +23,7 @@
 <div id="if-name-exists"></div>
 <div id="confirm-buttons" class="form-buttons" style="display:none;">
     <h3>Are you sure you want to delete this author?</h3>
-    <button type="button" class="delete-button">Confirm</button>
+    <button type="button" class="delete-button" id="delete-author">Confirm</button>
     <button type="button" class="normal-button" onclick="closeModal()">Cancel</button>
 </div>
 </body>

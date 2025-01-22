@@ -11,8 +11,8 @@
 <h2>Delete book</h2>
 <form id="delete-book-form" class="form" onsubmit="confirmDeleteBookForm(); return false ;">
     <div class="form-group">
-        <label for="isbn">ISBN</label>
-        <input type="text" id="isbn" name="isbn" maxlength="50" required>
+        <label for="isbn-delete">ISBN</label>
+        <input type="text" id="isbn-delete" name="isbn-delete" maxlength="50" required>
     </div>
 
     <div class="form-buttons">
@@ -23,7 +23,7 @@
 <div id="if-isbn-exists"></div>
 <div id="confirm-buttons" class="form-buttons" style="display:none;">
     <h3>Are you sure you want to delete this book?</h3>
-    <button type="button" class="delete-button">Confirm</button>
+    <button type="button" class="delete-button" id="delete-book">Confirm</button>
     <button type="button" class="normal-button" onclick="closeModal()">Cancel</button>
 </div>
 </body>

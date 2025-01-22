@@ -10,5 +10,4 @@ api.get('/author/:name', AuthorController.getAuthor);
 api.put('/updateAuthor/:name', AuthorController.updateAuthor);
 api.delete('/deleteAuthor/:name', AuthorController.deleteAuthor);
 
-
 module.exports = api;

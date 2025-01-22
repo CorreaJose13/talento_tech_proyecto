@@ -9,7 +9,7 @@
 
 <body>
     <h2 id="create-author-h2">Create author</h2>
-    <form id="create-author-form" class="form">
+    <form id="create-author-form" class="form" onsubmit="saveAuthor(); return false;">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" maxlength="60" required>

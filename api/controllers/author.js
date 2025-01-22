@@ -18,7 +18,7 @@ async function saveAuthor(req, res) {
             const authorStored = await author.save();
             res.status(200).send({ author: authorStored });
         } catch (err) {
-            res.status(500).send({ message: 'Error saving the author' });
+            res.status(500).send({ message: 'Error saving the author:' + err});
         }
     } else {
         res.status(400).send({

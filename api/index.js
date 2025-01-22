@@ -11,7 +11,7 @@ const port = 3000;
 
 ////// CONEXIÓN MONGODB
 
-var bdURL = 'mongodb://localhost:27017/proyecto_final';
+var bdURL = 'mongodb://127.0.0.1:27017/proyecto_final';
 mongoose.connect(bdURL);
 
 // CONFIG EVENTOS CONEXIÓN
