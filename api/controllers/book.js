@@ -49,6 +49,21 @@ async function getBook(req, res) {
     }
 }
 
+async function getBooks(req, res) {
+    try {
+        const books = await Book.find();
+
+        if (!books || books.length === 0) {
+            return res.status(404).send({ message: 'No books found' });
+        }
+
+        return res.status(200).send({ books });
+
+    } catch (err) {
+        return res.status(500).send({ message: 'Error in the request' });
+    }
+}
+
 async function updateBook(req, res){
     try{
     var bookIsbn = req.params.isbn;
@@ -88,6 +103,7 @@ async function deleteBook(req, res){
 module.exports = {
     saveBook,
     getBook,
+    getBooks,
     updateBook,
     deleteBook
 }
