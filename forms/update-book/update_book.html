@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update book form</title>
+</head>
+
+<body>
+<h2>Update book</h2>
+<form id="update-book-form" class="form" onsubmit="updateBookResult(); return false ;">
+    <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" id="isbn" name="isbn" maxlength="50" required>
+    </div>
+
+    <div class="form-buttons">
+        <button type="submit" class="update-button">Update</button>
+        <button type="button" class="delete-button" onclick="closeModal()">Cancel</button>
+    </div>
+</form>
+<div id="if-isbn-exists"></div>
+<div id="confirm-buttons" class="form-buttons" style="display:none;">
+    <button type="button" class="update-button">Confirm</button>
+    <button type="button" class="normal-button" onclick="closeModal()">Close</button>
+</div>
+</body>
+
+</html>
