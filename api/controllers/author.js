@@ -45,6 +45,21 @@ async function getAuthor(req, res) {
     }
 }
 
+async function getAuthors(req, res) {
+    try {
+        const authors = await Author.find();
+
+        if (!authors || authors.length === 0) {
+            return res.status(404).send({ message: 'No authors found' });
+        }
+
+        return res.status(200).send({ authors });
+
+    } catch (err) {
+        return res.status(500).send({ message: 'Error in the request' });
+    }
+}
+
 async function updateAuthor(req, res){
     try{
     var authorName = req.params.name;
@@ -80,9 +95,12 @@ async function deleteAuthor(req, res){
         return res.status(500).send({message: 'Error deleting the author', error: err.message});
     }
 }
+
+
 module.exports = {
     saveAuthor,
     getAuthor,
+    getAuthors,
     updateAuthor,
     deleteAuthor
 }
