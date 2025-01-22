@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create author form</title>
+</head>
+
+<body>
+    <h2 id="create-author-h2">Create author</h2>
+    <form id="create-author-form" class="form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" maxlength="60" required>
+        </div>
+
+        <div class="form-group">
+            <label for="surname">Surname</label>
+            <input type="text" id="surname" name="surname" maxlength="60" required>
+        </div>
+
+        <div class="form-group">
+            <label for="publication-date">First publication date</label>
+            <input type="date" id="publication-date" name="publication-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="awards">Awards</label>
+            <input type="text" id="awards" name="awards" maxlength="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="birth-date">Birth Date</label>
+            <input type="date" id="birth-date" name="birth-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="death-date">Death Date</label>
+            <input type="date" id="death-date" name="death-date">
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit" class="create-button" id="create-author-button">Save</button>
+            <button type="button" class="delete-button" onclick="closeModal()">Cancel</button>
+        </div>
+    </form>
+</body>
+
+</html>

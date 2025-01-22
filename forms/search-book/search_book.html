@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search book form</title>
+</head>
+
+<body>
+<h2>Search book</h2>
+<form id="search-book-form" class="form" onsubmit="searchBookResult(); return false ;">
+    <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" id="isbn" name="isbn" maxlength="50" required>
+    </div>
+
+    <div class="form-buttons">
+        <button type="submit" class="search-button">Search</button>
+        <button type="button" class="delete-button" onclick="closeModal()">Cancel</button>
+    </div>
+</form>
+<div id="if-isbn-exists"></div>
+<div id="confirm-buttons" class="form-buttons" style="display:none;">
+    <button type="button" class="normal-button" onclick="closeModal()">Close</button>
+</div>
+</body>
+
+</html>

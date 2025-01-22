@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search author form</title>
+</head>
+
+<body>
+<h2>Search author</h2>
+<form id="search-author-form" class="form" onsubmit="searchAuthorResult(); return false ;">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" maxlength="60" required>
+    </div>
+
+    <div class="form-buttons">
+        <button type="submit" class="search-button">Search</button>
+        <button type="button" class="delete-button" onclick="closeModal()">Cancel</button>
+    </div>
+</form>
+<div id="if-name-exists"></div>
+<div id="confirm-buttons" class="form-buttons" style="display:none;">
+    <button type="button" class="normal-button" onclick="closeModal()">Close</button>
+</div>
+</body>
+
+</html>
